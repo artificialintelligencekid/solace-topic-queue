@@ -1,0 +1,50 @@
+server:
+  port: 8081
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+# This part will be fetched from config server from https://github.com/artificialintelligencekid/solace-topic-queue-configs/blob/main/solace-topic-queue/dev/solace-topic-queue-dev.yml
+
+#solace:
+#  host: tcp://localhost:55554
+#  username: admin
+#  password: admin
+#  vpnName: default
+#  queues:
+#    - name: DEV.ORDERSERVICE.V1
+#      topics:
+#        - dev/orderservice/v1/created
+#        - dev/orderservice/v1/created/success
+#        - dev/orderservice/v1/created/failure
+#    - name: DEV.PAYMENTSERVICE.V1
+#      topics:
+#        - dev/paymentservice/v1/created
+#        - dev/paymentservice/v1/created/success
+#        - dev/paymentservice/v1/created/failure
+#    - name: DEV.CARTSERVICE.V1
+#      topics:
+#        - dev/cartservice/success/v1/created
+#        - dev/cartservice/success/v1/created/success
+#        - dev/cartservice/success/v1/created/failure
+
+
+
+
+
+
+
+
+
+
+logging:
+  level:
+    org.springframework: ERROR
+    com.aikid: DEBUG
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
+    file: "%d %p %c{1.} [%t] %m%n"
